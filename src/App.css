@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gainsboro;
+}
+
+table {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  width: 95vw;
+
+  border-spacing: 10px;
+  text-align: left;
+}
+.form {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  width: 40vw;
+  height: 4vh;
+  border-radius: 4px;
+  border: 0px;
+  padding-left: 10px;
+  box-shadow: 2px 2px 9px #888888;
+}
+input:hover {
+  box-shadow: 6px 7px 11px #888888;
+}
+/* tr {
+  border-bottom: 1px solid black;
+} */
+th {
+  text-transform: capitalize;
+  margin: 0px;
+  padding: 0px;
+}
+tr {
+  border: 2px solid black !important;
+}
