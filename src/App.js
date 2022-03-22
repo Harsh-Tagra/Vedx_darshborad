@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
 import List from "./components/List";
@@ -20,16 +19,16 @@ function App() {
     if (filter && filter !== "All") {
       setResult((res) => res.filter(({ status }) => status.includes(filter)));
     }
-  }, [search, filter]);
+  }, [search, filter, Data]);
 
-  const fetchdata = async () => {
-    const Api = "https://my-json-server.typicode.com/Ved-X/assignment/orders";
-    let Res = await fetch(Api);
-    const data = await Res.json();
-    setData(data);
-    setResult(data);
-  };
   useEffect(() => {
+    const fetchdata = async () => {
+      const Api = "https://my-json-server.typicode.com/Ved-X/assignment/orders";
+      let Res = await fetch(Api);
+      const data = await Res.json();
+      setData(data);
+      setResult(data);
+    };
     fetchdata();
   }, []);
   console.clear();
